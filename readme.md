@@ -27,6 +27,8 @@
 #### ![image](https://user-images.githubusercontent.com/62974484/225822511-db5ed846-76b3-4e76-b40b-b653746af40c.png)
 ### <br/><br/><br/>
 
+--------------------------------------------------------------------------
+# 이 섹션 내용은 날라갈 예정. 튜토리얼이 잘 안 맞음.
 ## hands-on
 ### 아래 사이트를 참고함
 #### https://blog.acronym.co.kr/329   ->    별루임... 다른 사이트 참고하기
@@ -189,5 +191,38 @@ $ cp id_rsa.pub authorized_keys
 ```
 ### 그리고 $ ssh localhost 를 써서 로그인 없이 잘 접속되는지 확인해보자.
 
+----------------------------------------------------------------
 
+## hands-on
+### 아래 사이트를 참고함
+#### https://www.tutorialspoint.com/hadoop/hadoop_quick_guide.htm
+### <br/>
 
+### `ssh`
+### hadoop 을 이용하기 위해서는 로그인 없이 접속할 수 있어야 한다.
+### ~/.ssh 경로로 가기
+#### /TBI/People/tbi/jhshin/.ssh
+```
+$ ssh-keygen -t rsa
+$ cp id_rsa.pub authorized_keys
+$ chmod 0600 ~/.ssh/authorized_keys 
+```
+### 그리고 $ ssh localhost 를 써서 로그인 없이 잘 접속되는지 확인해보자.
+### <br/>
+
+### `java 설치 확인`
+```
+$ java -version
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/225844422-ff5463aa-8a6f-4b03-aec0-dbefe8827173.png)
+### <br/>
+
+### `installing hadoop`
+### 아래에서 가장 최신 버전으로 다운로드하였다.
+#### http://mirror.kakao.com/apache/hadoop/common/
+```
+$ wget http://mirror.kakao.com/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
+$ tar zxf hadoop-3.3.4.tar.gz
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/225825586-cfa48579-a4d6-43ab-a0e3-7329e70d47b7.png)
+### <br/>
