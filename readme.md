@@ -44,7 +44,7 @@ $ tar zxf hadoop-3.3.4.tar.gz
 
 ### hadoop-3.3.4/etc/hadoop 에 예제 파일들이 있다. 
 ### hadoop-3.3.4/ 에 conf 디렉터리 하나 만들자.
-### hadoop-env.sh 복사
+### `hadoop-env.sh`
 ```
 cp etc/hadoop/hadoop-env.sh conf/
 ```
@@ -58,7 +58,40 @@ $ echo $JAVA_HOME
 #### ![image](https://user-images.githubusercontent.com/62974484/225834159-01a16e48-1e03-41d5-af10-86792f600760.png)
 ### conf/hadoop-env.sh 수정하기
 #### ![image](https://user-images.githubusercontent.com/62974484/225834326-229112ba-f510-4848-b577-e5fb40a0bf5b.png)
+### <br/>
 
+### `core-site.xml`
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/jhshin</value>
+    </property>
+</configuration>
+```
 
 ### <br/><br/><br/>
 
