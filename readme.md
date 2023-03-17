@@ -226,3 +226,8 @@ $ tar zxf hadoop-3.3.4.tar.gz
 ```
 #### ![image](https://user-images.githubusercontent.com/62974484/225825586-cfa48579-a4d6-43ab-a0e3-7329e70d47b7.png)
 ### <br/>
+
+### hadoop 은 mode 가 3 가지 있다고 한다.
+### 나는 일단 테스트를 할 거니 default 인 Local/Standalone Mode 로 진행하자.
+#### ![image](https://user-images.githubusercontent.com/62974484/225845319-ac9ef65d-cc13-4352-b26d-91c84adde454.png)
+
