@@ -30,6 +30,16 @@
 ## hands-on
 ### 아래 사이트를 참고함
 #### https://blog.acronym.co.kr/329
+### <br/>
+### `install`
+### 아래에서 가장 최신 버전으로 다운로드하였다.
+#### http://mirror.kakao.com/apache/hadoop/common/
+```
+$ wget http://mirror.kakao.com/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
+$ tar zxf hadoop-3.3.4.tar.gz
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/225825586-cfa48579-a4d6-43ab-a0e3-7329e70d47b7.png)
+
 ### <br/><br/><br/>
 
 
