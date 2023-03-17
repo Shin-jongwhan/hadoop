@@ -39,7 +39,8 @@ $ wget http://mirror.kakao.com/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.ta
 $ tar zxf hadoop-3.3.4.tar.gz
 ```
 #### ![image](https://user-images.githubusercontent.com/62974484/225825586-cfa48579-a4d6-43ab-a0e3-7329e70d47b7.png)
-
+### hadoop-3.3.4/etc/hadoop 에 예제 파일들이 있다. 
+### hadoop-3.3.4/ 에 conf 디렉터리 하나 만들자.
 ### <br/><br/><br/>
 
 
