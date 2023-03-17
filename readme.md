@@ -31,6 +31,7 @@
 ### 아래 사이트를 참고함
 #### https://blog.acronym.co.kr/329
 ### <br/>
+
 ### `install`
 ### 아래에서 가장 최신 버전으로 다운로드하였다.
 #### http://mirror.kakao.com/apache/hadoop/common/
@@ -39,8 +40,26 @@ $ wget http://mirror.kakao.com/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.ta
 $ tar zxf hadoop-3.3.4.tar.gz
 ```
 #### ![image](https://user-images.githubusercontent.com/62974484/225825586-cfa48579-a4d6-43ab-a0e3-7329e70d47b7.png)
+### <br/>
+
 ### hadoop-3.3.4/etc/hadoop 에 예제 파일들이 있다. 
 ### hadoop-3.3.4/ 에 conf 디렉터리 하나 만들자.
+### hadoop-env.sh 복사
+```
+cp etc/hadoop/hadoop-env.sh conf/
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/225833909-bfdc831a-cf78-4e6a-a17b-c9187597872e.png)
+### 수정하기
+### 먼저 JAVA_HOME 과 hadoop home 경로를 등록해준다.
+```
+# JAVA_HOME 알아보기
+$ echo $JAVA_HOME
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/225834159-01a16e48-1e03-41d5-af10-86792f600760.png)
+### conf/hadoop-env.sh 수정하기
+#### ![image](https://user-images.githubusercontent.com/62974484/225834326-229112ba-f510-4848-b577-e5fb40a0bf5b.png)
+
+
 ### <br/><br/><br/>
 
 
