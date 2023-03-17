@@ -29,7 +29,7 @@
 
 ## hands-on
 ### 아래 사이트를 참고함
-#### https://blog.acronym.co.kr/329
+#### https://blog.acronym.co.kr/329   ->    별루임... 다른 사이트 참고하기
 ### <br/>
 
 ### `install`
@@ -174,8 +174,20 @@ $ echo $JAVA_HOME
 ```
 ### <br/>
 
-
+### `slaves` ?
+### 잘 모르겠는데 conf/ 폴더에 slaves 파일 하나 만들고 hostname 인 husky 를 적어주고 저장하였다.
 ### <br/><br/><br/>
+
+
+## ssh 
+### hadoop 을 이용하기 위해서는 로그인 없이 접속할 수 있어야 한다.
+### ~/.ssh 경로로 가기
+#### /TBI/People/tbi/jhshin/.ssh
+```
+$ ssh-keygen -t rsa
+$ cp id_rsa.pub authorized_keys
+```
+### 그리고 $ ssh localhost 를 써서 로그인 없이 잘 접속되는지 확인해보자.
 
 
 
