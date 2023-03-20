@@ -230,4 +230,16 @@ $ tar zxf hadoop-3.3.4.tar.gz
 ### hadoop 은 mode 가 3 가지 있다고 한다.
 ### 나는 일단 테스트를 할 거니 default 인 Local/Standalone Mode 로 진행하자.
 #### ![image](https://user-images.githubusercontent.com/62974484/225845319-ac9ef65d-cc13-4352-b26d-91c84adde454.png)
+### <br/>
+
+### ~/.bashrc 에 hadoop 경로 export
+```
+export HADOOP_HOME=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4
+# PATH 에 hadoop bin 경로를 붙여준다.
+export PATH=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/bin:$PATH
+```
+### setting 확인
+#### ![image](https://user-images.githubusercontent.com/62974484/226220076-5fa6f9ba-4961-485a-a274-751847b91d53.png)
+### <br/>
+
 
