@@ -193,7 +193,7 @@ $ cp id_rsa.pub authorized_keys
 
 ----------------------------------------------------------------
 
-## hands-on
+# hands-on
 ### 아래 사이트를 참고함
 #### https://www.tutorialspoint.com/hadoop/hadoop_quick_guide.htm
 ### <br/>
@@ -233,7 +233,7 @@ $ tar zxf hadoop-3.3.4.tar.gz
 #### ![image](https://user-images.githubusercontent.com/62974484/225845319-ac9ef65d-cc13-4352-b26d-91c84adde454.png)
 ### <br/>
 
-### `Installing Hadoop in Standalone Mode`
+## Installing Hadoop in Standalone Mode
 ### ~/.bashrc 에 hadoop 경로 export
 ```
 export HADOOP_HOME=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4
@@ -272,4 +272,4 @@ hadoop jar /TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/share/hadoop/mapreduce/had
 #### ![image](https://user-images.githubusercontent.com/62974484/226222061-8ec19ed4-616a-4cfd-95cd-3d8aa2867a87.png)
 ### <br/><br/>
 
-### `Installing Hadoop in Pseudo Distributed Mode`
+## Installing Hadoop in Pseudo Distributed Mode
