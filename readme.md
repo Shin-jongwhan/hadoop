@@ -421,3 +421,16 @@ start-yarn.sh
 ```
 #### ![image](https://user-images.githubusercontent.com/62974484/226232745-faeeb210-728a-4f38-9240-023617b4919d.png)
 ### <br/>
+
+### hadoop process 가 실행이 되긴 했다.
+#### ![image](https://user-images.githubusercontent.com/62974484/226232934-29f1c551-0867-4c22-a3be-2729802dd7e9.png)
+### ping 으로 서버 실행 확인
+```
+# Hadoop on Browser
+ping localhost -p 50070
+# All Applications for Cluster
+ping localhost -p 8088
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/226245111-d149272b-7978-488b-a86f-80ae6a4c52a4.png)
+#### ![image](https://user-images.githubusercontent.com/62974484/226245420-4987be84-bf18-42c9-81ec-a16c8c434e2d.png)
+
