@@ -240,6 +240,9 @@ export HADOOP_HOME=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4
 # PATH 에 hadoop bin 경로를 붙여준다.
 export PATH=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/bin:$PATH
 ```
+```
+source ~/.bashrc
+```
 ### setting 확인
 #### ![image](https://user-images.githubusercontent.com/62974484/226220076-5fa6f9ba-4961-485a-a274-751847b91d53.png)
 ### <br/>
@@ -273,3 +276,21 @@ hadoop jar /TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/share/hadoop/mapreduce/had
 ### <br/><br/>
 
 ## Installing Hadoop in Pseudo Distributed Mode
+### 다음을 ~/.bashrc 에 추가해주자.
+```
+export HADOOP_MAPRED_HOME=$HADOOP_HOME 
+export HADOOP_COMMON_HOME=$HADOOP_HOME 
+
+export HADOOP_HDFS_HOME=$HADOOP_HOME 
+export YARN_HOME=$HADOOP_HOME 
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native 
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin 
+export HADOOP_INSTALL=$HADOOP_HOME 
+```
+```
+source ~/.bashrc
+```
+### <br/>
+
+### `hadoop configuration`
+### 
