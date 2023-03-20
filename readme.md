@@ -229,9 +229,11 @@ $ tar zxf hadoop-3.3.4.tar.gz
 
 ### hadoop 은 mode 가 3 가지 있다고 한다.
 ### 나는 일단 테스트를 할 거니 default 인 Local/Standalone Mode 로 진행하자.
+### 그리고 최종적으로는 fully distributed mode 로 가야 한다.
 #### ![image](https://user-images.githubusercontent.com/62974484/225845319-ac9ef65d-cc13-4352-b26d-91c84adde454.png)
 ### <br/>
 
+### `Installing Hadoop in Standalone Mode`
 ### ~/.bashrc 에 hadoop 경로 export
 ```
 export HADOOP_HOME=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4
@@ -242,4 +244,32 @@ export PATH=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/bin:$PATH
 #### ![image](https://user-images.githubusercontent.com/62974484/226220076-5fa6f9ba-4961-485a-a274-751847b91d53.png)
 ### <br/>
 
+### example
+### mapreduce jar 파일을 실행 확인
+```
+hadoop jar /TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.4.jar
+# or
+hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.4.jar
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/226220826-35187d95-ee3f-4f07-a80a-185a05759921.png)
+### <br/>
 
+### test
+### test dir 를 하나 만들자
+```
+mkdir -p /TBI/People/tbi/jhshin/test/hadoop/input
+cp $HADOOP_HOME/*.txt /TBI/People/tbi/jhshin/test/hadoop/input
+```
+### mapreduce 실행해보기
+```
+hadoop jar /TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.4.jar wordcount /TBI/People/tbi/jhshin/test/hadoop/input output
+```
+### output 폴더가 하나 생긴다.
+#### ![image](https://user-images.githubusercontent.com/62974484/226221624-a0148569-9bd7-483b-b1f3-ed03a51274fe.png)
+### 주로 part-r-00000 이라는 part 파일이 있는데, 여기에 대부분의 내용이 있다.
+### 단어 개수를 세어주는 거라고 하는데... 개수가 안 맞는데..
+#### 설명 : wordcount는 어떤 글에 등장하는 단어들의 개수를 세는 작업이구요, java 프로그래밍을 처음 배울때 "hello world"를 찍어보듯 맵리듀스를 처음 배울때 짜보는 프로그램 입니다.
+#### ![image](https://user-images.githubusercontent.com/62974484/226222061-8ec19ed4-616a-4cfd-95cd-3d8aa2867a87.png)
+### <br/><br/>
+
+### `Installing Hadoop in Pseudo Distributed Mode`
