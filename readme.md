@@ -276,16 +276,20 @@ hadoop jar /TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4/share/hadoop/mapreduce/had
 ### <br/><br/>
 
 ## Installing Hadoop in Pseudo Distributed Mode
-### 다음을 ~/.bashrc 에 추가해주자.
+### 다음을 ~/.bashrc 에 추가, 수정해주자. 위에서 PATH 에 \[hadoop_dir\]/bin 을 따로 지정해줬는데 기존 export PATH 에는 해당 bin 경로를 지워주고 아래와 같이 수정해준다.
 ```
-export HADOOP_MAPRED_HOME=$HADOOP_HOME 
-export HADOOP_COMMON_HOME=$HADOOP_HOME 
+# 원래 PATH 로 변경
+export PATH=/TBI/People/tbi/jhshin/pipeline/hisat-genotype:/TBI/People/tbi/jhshin/pipeline/hisat-genotype/hisat2:$PATH
 
-export HADOOP_HDFS_HOME=$HADOOP_HOME 
-export YARN_HOME=$HADOOP_HOME 
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native 
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin 
-export HADOOP_INSTALL=$HADOOP_HOME 
+# 추가로 export
+export HADOOP_HOME=/TBI/People/tbi/jhshin/hadoop/hadoop-3.3.4
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$HADOOP_HOME/sbin:$HADOOP_HOME/bin:$PATH
+export HADOOP_INSTALL=$HADOOP_HOME
 ```
 ```
 source ~/.bashrc
@@ -293,4 +297,103 @@ source ~/.bashrc
 ### <br/>
 
 ### `hadoop configuration`
-### 
+### \[hadoop\]/etc/hadoop 경로에서 모든 config 파일을 확인할 수 있다.
+```
+cd $HADOOP_HOME/etc/hadoop
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/226226805-8cd946ec-49dc-45b0-bfef-ba9def80911f.png)
+### <br/>
+
+### `hadoop-env.sh`
+### JAVA_HOME 등록
+```
+$ echo $JAVA_HOME
+/TBI/People/tbi/jhshin/miniconda3
+```
+### hadoop-env.sh 를 수정한다.
+```
+export JAVA_HOME=/TBI/People/tbi/jhshin/miniconda3
+```
+### <br/>
+
+### `core-site.xml`
+### The core-site.xml file contains information such as the port number used for Hadoop instance, memory allocated for the file system, memory limit for storing the data, and size of Read/Write buffers.
+```
+<configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+</configuration>
+```
+### <br/>
+
+### `hdfs-site.xml`
+### namenode, datanode 저장 공간 정보
+### The hdfs-site.xml file contains information such as the value of replication data, namenode path, and datanode paths of your local file systems. It means the place where you want to store the Hadoop infrastructure.
+### 이 경로로 똑같이 설정해도 되는지 모르겠다.
+```
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+
+    <property>
+        <name>dfs.name.dir</name>
+        <value>file:///home/hadoop/hadoopinfra/hdfs/namenode </value>
+    </property>
+
+    <property>
+        <name>dfs.data.dir</name>
+        <value>file:///home/hadoop/hadoopinfra/hdfs/datanode </value>
+    </property>
+</configuration>
+```
+### 나는 경로를 만들고나서 이렇게 수정하였다.
+```
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+
+    <property>
+        <name>dfs.name.dir</name>
+        <value>file:///data08/project/jhshin/hadoop-3.3.4/data/hdfs/namenode </value>
+    </property>
+
+    <property>
+        <name>dfs.data.dir</name>
+        <value>file:///data08/project/jhshin/hadoop-3.3.4/data/hdfs/datanode </value>
+    </property>
+</configuration>
+```
+### <br/>
+
+### `yarn-site.xml`
+### user specific tag 를 정의한다.
+### yarn 이란? 의존성관리 javascript 패키지 매니저
+```
+<configuration>
+<!-- Site specific YARN configuration properties -->
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+</configuration>
+```
+### <br/>
+
+### `mapred-site.xml`
+### This file is used to specify which MapReduce framework we are using. By default, Hadoop contains a template of yarn-site.xml. First of all, it is required to copy the file from mapred-site.xml.template to mapred-site.xml file using the following command.
+```
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+```
+### <br/>
+
