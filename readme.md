@@ -395,5 +395,29 @@ export JAVA_HOME=/TBI/People/tbi/jhshin/miniconda3
     </property>
 </configuration>
 ```
+### <br/><br/>
+
+## Verifying Hadoop Installation
+### 아래 명령어를 입력하면 hadoop file system 이 실행된다.
+```
+hdfs namenode -format
+```
+### 된건가...
+#### ![image](https://user-images.githubusercontent.com/62974484/226232393-18fda4cd-f52a-41e9-848e-6beb452d496f.png)
+#### ...
+#### ![image](https://user-images.githubusercontent.com/62974484/226232428-35dafb83-2ddb-4de8-b0dc-174bc5f7a14f.png)
 ### <br/>
 
+### `Verifying Hadoop dfs`
+```
+start-dfs.sh 
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/226232762-bb8dc5c6-bf56-49d2-bed1-7914a8b4cd30.png)
+### <br/>
+
+### `Verifying Yarn Script`
+```
+start-yarn.sh 
+```
+#### ![image](https://user-images.githubusercontent.com/62974484/226232745-faeeb210-728a-4f38-9240-023617b4919d.png)
+### <br/>
