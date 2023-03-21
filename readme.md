@@ -434,3 +434,20 @@ ping localhost -p 8088
 #### ![image](https://user-images.githubusercontent.com/62974484/226245111-d149272b-7978-488b-a86f-80ae6a4c52a4.png)
 #### ![image](https://user-images.githubusercontent.com/62974484/226245420-4987be84-bf18-42c9-81ec-a16c8c434e2d.png)
 
+### 웹에서 접속하면 이렇게 뜬다고 하는데 나는 root 권한이 없어서 포트 개방을 못 하니... 스킵
+#### ![image](https://user-images.githubusercontent.com/62974484/226495271-e516c7c3-e4e1-4555-bfff-e931473189fa.png)
+#### ![image](https://user-images.githubusercontent.com/62974484/226495289-6addd3b7-eaa3-4ee5-bdfe-d020066dff74.png)
+### <br/><br/><br/>
+
+## Hadoop - HDFS Overview
+### namenode, datanode, block 으로 이루어져 있다.
+### namenode 에서 파일이 어떻게 분리되서 저장되어 있는지에 대한 metadata 정보를 저장한다. client 는 namenode 에 저장된 정보를 토대로 datanode 를 읽는다.
+### datanode 는 파일이 저장된 node 이다. read / write 를 실제로 컨트롤해주는 것이 이 datanode 에서 이루어진다.
+### block 은 나눠진 파일이다.
+### read / write system failure 에 대비하기 위해 replication 을 만들어둔다.
+#### ![image](https://user-images.githubusercontent.com/62974484/226495710-cd764a59-3298-4dab-b138-324029bb1407.png)
+#### ![image](https://user-images.githubusercontent.com/62974484/226496155-2a9df8aa-a815-439d-ad19-cfc0fcd9dbb5.png)
+### `Goals of HDFS`
+#### ![image](https://user-images.githubusercontent.com/62974484/226496194-60c6a180-f699-4f99-8fe7-30efefdb3b30.png)
+
+
