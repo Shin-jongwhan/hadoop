@@ -434,9 +434,15 @@ ping localhost -p 8088
 #### ![image](https://user-images.githubusercontent.com/62974484/226245111-d149272b-7978-488b-a86f-80ae6a4c52a4.png)
 #### ![image](https://user-images.githubusercontent.com/62974484/226245420-4987be84-bf18-42c9-81ec-a16c8c434e2d.png)
 
-### 웹에서 접속하면 이렇게 뜬다고 하는데 나는 root 권한이 없어서 포트 개방을 못 하니... 스킵
+### 웹에서 접속하면 이렇게 뜬다고 하는데 나는 root 권한이 없어서 포트 개방을 못 하니... 안 되면 스킵
 #### ![image](https://user-images.githubusercontent.com/62974484/226495271-e516c7c3-e4e1-4555-bfff-e931473189fa.png)
 #### ![image](https://user-images.githubusercontent.com/62974484/226495289-6addd3b7-eaa3-4ee5-bdfe-d020066dff74.png)
+### <br/>
+
+### 8088 웹서버는 실행이 되는 것을 확인하였다.
+### 50070 은 접속이 안 된다.
+#### ![image](https://github.com/Shin-jongwhan/hadoop/assets/62974484/a4983ba8-a867-4ef8-b8ab-6dff86d9005f)
+
 ### <br/><br/><br/>
 
 ## Hadoop - HDFS Overview
