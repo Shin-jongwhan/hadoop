@@ -441,7 +441,7 @@ ping localhost -p 8088
 
 ### 8088 웹서버는 실행이 되는 것을 확인하였다.
 ### 50070 은 접속이 안 된다.
-#### ![image](https://github.com/Shin-jongwhan/hadoop/assets/62974484/a4983ba8-a867-4ef8-b8ab-6dff86d9005f)
+#### ![image](https://github.com/Shin-jongwhan/hadoop/assets/62974484/083400ec-5274-4c15-9946-99d4dc1a4194)
 
 ### <br/><br/><br/>
 
